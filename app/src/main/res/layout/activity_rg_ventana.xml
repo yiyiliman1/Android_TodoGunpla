@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".rgVentana">
+
+    <ImageView
+        android:id="@+id/imagefondo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/fondoapp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="31dp" />
+
+    <TextView
+        android:id="@+id/cajaBuscador"
+        android:layout_width="261dp"
+        android:layout_height="57dp"
+        android:background="@drawable/header_style"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@drawable/header_style"
+        android:gravity="center"
+        android:text="TodoGunpla"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imagefondo"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/paginaHome"
+        android:layout_width="28dp"
+        android:layout_height="27dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/titulo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/home_icon" />
+
+    <ImageView
+        android:id="@+id/opciones"
+        android:layout_width="28dp"
+        android:layout_height="27dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="@+id/titulo"
+        app:layout_constraintHorizontal_bias="0.934"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.538"
+        app:srcCompat="@drawable/iconoopciones" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.09" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.14" />
+
+    <EditText
+        android:id="@+id/buscador"
+        android:layout_width="238dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="text"
+        android:hint="Buscador"
+        app:layout_constraintBottom_toBottomOf="@+id/cajaBuscador"
+        app:layout_constraintEnd_toEndOf="@+id/cajaBuscador"
+        app:layout_constraintStart_toStartOf="@+id/cajaBuscador"
+        app:layout_constraintTop_toTopOf="@+id/cajaBuscador"/>
+
+    <ScrollView
+        android:layout_width="410dp"
+        android:layout_height="628dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/textoIniciarsesion"
+                android:layout_width="341dp"
+                android:layout_height="184dp"
+                android:layout_marginTop="10dp"
+                android:autoSizeTextType="uniform"
+                android:textColor="@color/black"
+                android:background="@drawable/header_style"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Los Gundam Real Grade (RG) son modelos a escala 1/144 que combinan alta complejidad y detalles finos, diseñados para ofrecer una experiencia de construcción avanzada. Con un enfoque en realismo, estos kits incluyen un esqueleto interno avanzado y piezas altamente detalladas, lo que los hace ideales para modelistas experimentados. La línea RG destaca por su precisión, articulación y calidad similar a escalas más grandes, pero en un formato más compacto." />
+
+            <ImageView
+                android:id="@+id/rgFreedom"
+                android:layout_width="195dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="40dp"
+                app:srcCompat="@drawable/rg_freedom" />
+
+            <ImageView
+                android:id="@+id/rgExia"
+                android:layout_width="195dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="40dp"
+                app:srcCompat="@drawable/rgexia" />
+
+            <ImageView
+                android:id="@+id/rgDestiny"
+                android:layout_width="195dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="40dp"
+                app:srcCompat="@drawable/rgdestiny" />
+
+            <ImageView
+                android:id="@+id/rgImpulse"
+                android:layout_width="195dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="40dp"
+                app:srcCompat="@drawable/rgimpul" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.18" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.81995136" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.42407662" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.74" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

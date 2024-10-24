@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "733625475102",
+    "project_id": "todogunpla",
+    "storage_bucket": "todogunpla.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733625475102:android:43c0227c187377723d0e0f",
+        "android_client_info": {
+          "package_name": "com.example.tiendagunpla"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHzVg3IGmqbBHemUhvIBMXYqzhTNyIU0k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
