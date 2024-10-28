@@ -34,17 +34,6 @@ public class iniciarSesion extends AppCompatActivity {
             return insets;
         });
 
-        // Te lleva a HOME
-        ImageView paginaHome = findViewById(R.id.paginaHome);
-
-        paginaHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(iniciarSesion.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
         // Te lleva a la ventana Crear Cuenta
         TextView irCC = findViewById(R.id.irCrearCuenta);
 
@@ -58,7 +47,7 @@ public class iniciarSesion extends AppCompatActivity {
 
 
     }
-    // inicia sesion
+    // iniciar sesion
     public void iniSesi(View view) {
         FirebaseFirestore database = FirebaseFirestore.getInstance();
 
@@ -83,6 +72,7 @@ public class iniciarSesion extends AppCompatActivity {
                                 if (contrasenaAlmacenada != null && contrasenaAlmacenada.equals(contra)) {
                                     // Contraseñas coinciden, navegar a la actividad principal
                                     Toast.makeText(iniciarSesion.this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
+
                                     Intent intent = new Intent(iniciarSesion.this, MainActivity.class);
                                     startActivity(intent);
                                 } else {

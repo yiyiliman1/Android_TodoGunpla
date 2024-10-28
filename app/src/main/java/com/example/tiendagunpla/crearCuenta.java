@@ -34,17 +34,6 @@ public class crearCuenta extends AppCompatActivity {
             return insets;
         });
 
-        // Te lleva a HOME
-        ImageView paginaHome = findViewById(R.id.paginaHome);
-
-        paginaHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(crearCuenta.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
         // Te lleva a la ventana Iniciar Sesión
         TextView irIS = findViewById(R.id.irIniciarSesion);
 
