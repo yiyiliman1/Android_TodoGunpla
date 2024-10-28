@@ -102,7 +102,7 @@
         android:layout_width="223dp"
         android:layout_height="364dp"
         android:gravity="center"
-        android:text="En Todo Gundam, ofrecemos una extensa gama de maquetas para todos los niveles, desde High Grade (HG) hasta los detallados Perfect Grade (PG). Contamos con ediciones limitadas, rarezas y los últimos lanzamientos, junto con herramientas y accesorios para personalizar tus proyectos. Nuestro equipo está siempre disponible para asesorarte y llevar tu pasión por Gundam al siguiente nivel."
+        android:text="En TodoGundam, ofrecemos una extensa gama de maquetas para todos los niveles, desde High Grade (HG) hasta los detallados Perfect Grade (PG). Contamos con ediciones limitadas, rarezas y los últimos lanzamientos, junto con herramientas y accesorios para personalizar tus proyectos. Nuestro equipo está siempre disponible para asesorarte y llevar tu pasión por Gundam al siguiente nivel."
         android:textColor="@color/black"
         android:textSize="17dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline21"

@@ -171,7 +171,7 @@
         app:layout_constraintGuide_percent="0.44" />
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/TextUsu"
         android:layout_width="165dp"
         android:layout_height="35dp"
         android:ems="10"
@@ -179,7 +179,6 @@
         android:inputType="text"
         android:textSize="10dp"
         android:padding="10dp"
-        android:textColor="@color/white"
         android:background="@drawable/inicio_style"
         app:layout_constraintBottom_toTopOf="@+id/guideline25"
         app:layout_constraintEnd_toStartOf="@+id/guideline22"
@@ -198,7 +197,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline26" />
 
     <EditText
-        android:id="@+id/editTextText4"
+        android:id="@+id/TextContra"
         android:layout_width="165dp"
         android:layout_height="35dp"
         android:background="@drawable/inicio_style"
@@ -270,7 +269,7 @@
         app:layout_constraintGuide_percent="0.6497948" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/TextReContra"
         android:layout_width="165dp"
         android:layout_height="35dp"
         android:ems="10"
@@ -294,6 +293,7 @@
         android:id="@+id/button"
         android:layout_width="112dp"
         android:layout_height="38dp"
+        android:onClick="Registro"
         android:text="Registrarse"
         android:textSize="10dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline30"

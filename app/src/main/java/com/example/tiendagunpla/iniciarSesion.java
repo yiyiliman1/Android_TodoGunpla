@@ -5,12 +5,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import org.w3c.dom.Text;
 
 public class iniciarSesion extends AppCompatActivity {
 
@@ -46,5 +55,49 @@ public class iniciarSesion extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+    }
+    // inicia sesion
+    public void iniSesi(View view) {
+        FirebaseFirestore database = FirebaseFirestore.getInstance();
+
+        TextView username = findViewById(R.id.TextUsu);
+        TextView password = findViewById(R.id.TextContra);
+
+        String usuario = username.getText().toString();
+        String contra = password.getText().toString();
+
+        // Consultar Firestore para verificar las credenciales
+        database.collection("users").document(usuario)
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                        if (task.isSuccessful()) {
+                            DocumentSnapshot document = task.getResult();
+                            if (document.exists()) {
+                                // Obtener la contraseña almacenada
+                                String contrasenaAlmacenada = document.getString("password");
+                                // Comparar contraseñas
+                                if (contrasenaAlmacenada != null && contrasenaAlmacenada.equals(contra)) {
+                                    // Contraseñas coinciden, navegar a la actividad principal
+                                    Toast.makeText(iniciarSesion.this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(iniciarSesion.this, MainActivity.class);
+                                    startActivity(intent);
+                                } else {
+                                    // Contraseña incorrecta
+                                    Toast.makeText(iniciarSesion.this, "Contraseña incorrecta", Toast.LENGTH_SHORT).show();
+                                }
+                            } else {
+                                // Usuario no encontrado
+                                Toast.makeText(iniciarSesion.this, "Usuario no encontrado", Toast.LENGTH_SHORT).show();
+                            }
+                        } else {
+                            // Error al realizar la consulta
+                            Toast.makeText(iniciarSesion.this, "Error al acceder a los datos", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
     }
 }
