@@ -16,23 +16,18 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
 
-    <TextView
+    <ImageView
         android:id="@+id/start"
-        android:layout_width="115dp"
-        android:layout_height="58dp"
-        android:layout_gravity="center"
-        android:alpha="1"
-        android:background="@drawable/header_style"
-        android:fontFamily="sans-serif-medium"
-        android:gravity="center"
-        android:text="Start"
-        android:textColor="@android:color/black"
-        android:textSize="40dp"
+        android:layout_width="100dp"
+        android:layout_height="91dp"
         app:layout_constraintBottom_toBottomOf="@+id/amv"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.918" />
+        app:layout_constraintVertical_bias="0.873"
+        android:background="@drawable/style_start"
+        app:srcCompat="@drawable/icono_salir" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -46,6 +46,16 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
+        android:id="@+id/logOut"
+        android:layout_width="72dp"
+        android:layout_height="46dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/titulo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icono_salir" />
+
+    <ImageView
         android:id="@+id/opciones"
         android:layout_width="28dp"
         android:layout_height="27dp"
@@ -71,7 +81,7 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.14" />
 
-    <EditText
+    <TextView
         android:id="@+id/buscador"
         android:layout_width="238dp"
         android:layout_height="46dp"
@@ -79,6 +89,7 @@
         android:gravity="center"
         android:inputType="text"
         android:hint="Buscador"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/cajaBuscador"
         app:layout_constraintEnd_toEndOf="@+id/cajaBuscador"
         app:layout_constraintStart_toStartOf="@+id/cajaBuscador"

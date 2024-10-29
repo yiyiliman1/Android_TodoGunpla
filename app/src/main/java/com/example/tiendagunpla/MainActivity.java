@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +24,18 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        // logOut
+        ImageView lOut = findViewById(R.id.logOut);
+
+        lOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Inicio.class);
+                startActivity(intent);
+                finish(); // cierra la sesión actual
+            }
+        });
+
         // Te lleva a la ventana Opciones
         ImageView opciones = findViewById(R.id.opciones);
 
@@ -33,7 +46,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        // Te lleva a lña ventana FG
+
+        // Te lleva al buscador
+        TextView bsc = findViewById(R.id.buscador);
+
+        bsc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, buscador.class);
+                startActivity(intent);
+            }
+        });
+
+        // Te lleva a la ventana FG
         ImageView fgLogo = findViewById(R.id.fgLogo);
 
         fgLogo.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         // Te lleva a la ventana HG
         ImageView hgLogo = findViewById(R.id.hgLogo);
 

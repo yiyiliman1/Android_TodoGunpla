@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -28,21 +29,21 @@ public class Inicio extends AppCompatActivity {
 
         });
         VideoView videoView = findViewById(R.id.amv);
-        TextView textView = findViewById(R.id.start);
+        ImageView imageView = findViewById(R.id.start);
         Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.amv);
         videoView.setVideoURI(videoUri);
         videoView.start();
         videoView.setOnCompletionListener(mp -> videoView.start());
         AlphaAnimation fadeIn = new AlphaAnimation(0.0f, 1.0f);
         fadeIn.setDuration(2000); // Duración de la animación en milisegundos
-        fadeIn.setStartOffset(500); // Espera antes de comenzar la animación
+        fadeIn.setStartOffset(700); // Espera antes de comenzar la animación
         fadeIn.setFillAfter(true); // Mantiene el texto visible después de la animación
 
         // Inicia la animación en el TextView
-        textView.startAnimation(fadeIn);
-        textView.setAlpha(1.0f);
+        imageView.startAnimation(fadeIn);
+        imageView.setAlpha(1.0f);
 
-        TextView st = findViewById(R.id.start);
+        ImageView st = findViewById(R.id.start);
 
         st.setOnClickListener(new View.OnClickListener() {
             @Override
