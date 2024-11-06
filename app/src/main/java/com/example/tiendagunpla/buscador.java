@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.w3c.dom.Text;
@@ -43,38 +44,42 @@ public class buscador extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(buscador.this, MainActivity.class);
                 startActivity(intent);
-                finish(); // cierra la sesión actual
             }
         });
 
-        // productos
-        List<Productos> pr = new ArrayList<>();
+        RecyclerView recyvlerView = findViewById(R.id.lstPr);
 
-        pr.add(new Productos("rg", R.drawable.rg_freedom, "freedom"));
+        List<Productos> pr = new ArrayList<Productos>();
+        pr.add(new Productos("RG",R.drawable.rg_freedom,"Freedom"));
+        pr.add(new Productos("RG",R.drawable.rgdestiny,"Destiny"));
+        pr.add(new Productos("MG",R.drawable.mg_barbatos,"Barbatos"));
 
-        // buscador
+        recyvlerView.setLayoutManager(new LinearLayoutManager(this));
+        recyvlerView.setAdapter(new MiAdpatador(getApplicationContext(),pr));
+
+        // Buscador de productos
+        MiAdpatador miAdaptador = new MiAdpatador(this, pr);
+        recyvlerView.setAdapter(miAdaptador);
+
         SearchView searchView = findViewById(R.id.sV);
-        searchView.clearFocus();
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
-            public boolean onQueryTextSubmit(String s) {
+            public boolean onQueryTextSubmit(String query) {
                 return false;
             }
 
             @Override
-            public boolean onQueryTextChange(String s) {
-                filterList(s);
+            public boolean onQueryTextChange(String newText) {
+                List<Productos> listaFiltrada = new ArrayList<>();
+                for (Productos producto : pr) {
+                    if (producto.getNombre().toLowerCase().contains(newText.toLowerCase()) ||
+                            producto.getModelo().toLowerCase().contains(newText.toLowerCase())) {
+                        listaFiltrada.add(producto);
+                    }
+                }
+                miAdaptador.filtrarLista(listaFiltrada);
                 return true;
             }
         });
-
-    }
-
-    private void filterList(String text) {
-        List<Productos> filteredList = new ArrayList<>();
-        for (Productos pr : Productos) {
-            if (pr.getNombre().toLowerCase().contains(text.toLowerCase()));
-            filteredList.add(pr);
-            }
     }
 }

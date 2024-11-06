@@ -7,14 +7,16 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 public class MiAdpatador extends RecyclerView.Adapter<MisProductos> {
 
     Context context;
-    List<Item> items;
+    List<Productos> pr;
 
-    public MiAdpatador(Context context, List<Item> items) {
+    public MiAdpatador(Context context, List<Productos> pr) {
         this.context = context;
-        this.items = items;
+        this.pr = pr;
     }
 
     @NonNull
@@ -25,11 +27,18 @@ public class MiAdpatador extends RecyclerView.Adapter<MisProductos> {
 
     @Override
     public void onBindViewHolder(@NonNull MisProductos holder, int position) {
-        holder.nameView.set
+        holder.pr.setImageResource(pr.get(position).getImg());
+        holder.mdl.setText(pr.get(position).getModelo());
+        holder.nmb.setText(pr.get(position).getNombre());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return pr.size();
+    }
+
+    public void filtrarLista(List<Productos> listaFiltrada) {
+        this.pr = listaFiltrada;
+        notifyDataSetChanged();
     }
 }
