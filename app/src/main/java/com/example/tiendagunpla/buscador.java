@@ -22,9 +22,6 @@ import java.util.List;
 
 public class buscador extends AppCompatActivity {
     private RecyclerView recyclerView;
-    private List<Item> itemList;
-    private ItemAdapter itemAdapter;
-    private SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,21 +33,6 @@ public class buscador extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
 
-        });
-        // buscador
-        searchView = findViewById(R.id.sV);
-        searchView.clearFocus();
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String s) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String s) {
-                filterList(newText);
-                return true;
-            }
         });
 
         // logOut
@@ -64,17 +46,35 @@ public class buscador extends AppCompatActivity {
                 finish(); // cierra la sesión actual
             }
         });
+
+        // productos
+        List<Productos> pr = new ArrayList<>();
+
+        pr.add(new Productos("rg", R.drawable.rg_freedom, "freedom"));
+
+        // buscador
+        SearchView searchView = findViewById(R.id.sV);
+        searchView.clearFocus();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                filterList(s);
+                return true;
+            }
+        });
+
     }
 
     private void filterList(String text) {
-        List<ClipData.Item> filteredList = new ArrayList<>();
-        for (ClipData.Item item : itemList) {
-            if (item.getItemName().toLowerCase.contains(text.toLowerCase())){
-                filteredList.add(item);
+        List<Productos> filteredList = new ArrayList<>();
+        for (Productos pr : Productos) {
+            if (pr.getNombre().toLowerCase().contains(text.toLowerCase()));
+            filteredList.add(pr);
             }
-        }
-        if (filteredList.isEmpty()){
-            Toast.makeText(this,"No hay",Toast.LENGTH_SHORT).show();
-        } else
     }
 }
