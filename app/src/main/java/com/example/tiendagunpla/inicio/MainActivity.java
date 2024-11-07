@@ -1,4 +1,4 @@
-package com.example.tiendagunpla;
+package com.example.tiendagunpla.inicio;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.example.tiendagunpla.R;
+import com.example.tiendagunpla.buscador.buscador;
+import com.example.tiendagunpla.modelos.fgVentana;
+import com.example.tiendagunpla.modelos.hgVentana;
+import com.example.tiendagunpla.modelos.mgVentana;
+import com.example.tiendagunpla.opcionesVentana;
+import com.example.tiendagunpla.modelos.pgVentana;
+import com.example.tiendagunpla.modelos.rgVentana;
 
 public class MainActivity extends AppCompatActivity {
 

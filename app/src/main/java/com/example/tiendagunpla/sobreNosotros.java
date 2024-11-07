@@ -11,6 +11,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.tiendagunpla.inicio.MainActivity;
+
 public class sobreNosotros extends AppCompatActivity {
 
     @Override

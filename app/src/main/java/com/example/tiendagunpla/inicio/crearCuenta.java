@@ -1,11 +1,8 @@
-package com.example.tiendagunpla;
+package com.example.tiendagunpla.inicio;
 
-import android.content.ContentValues;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,7 +12,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.google.firebase.Firebase;
+import com.example.tiendagunpla.R;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;

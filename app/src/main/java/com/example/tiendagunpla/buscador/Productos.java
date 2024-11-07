@@ -1,4 +1,4 @@
-package com.example.tiendagunpla;
+package com.example.tiendagunpla.buscador;
 
 public class Productos {
     private String modelo;

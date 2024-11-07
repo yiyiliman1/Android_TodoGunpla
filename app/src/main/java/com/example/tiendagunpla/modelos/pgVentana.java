@@ -1,4 +1,4 @@
-package com.example.tiendagunpla;
+package com.example.tiendagunpla.modelos;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,13 +12,18 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class hgVentana extends AppCompatActivity {
+import com.example.tiendagunpla.R;
+import com.example.tiendagunpla.buscador.buscador;
+import com.example.tiendagunpla.inicio.MainActivity;
+import com.example.tiendagunpla.opcionesVentana;
+
+public class pgVentana extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_hg_ventana);
+        setContentView(R.layout.activity_pg_ventana);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -31,7 +36,7 @@ public class hgVentana extends AppCompatActivity {
         bsc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(hgVentana.this, buscador.class);
+                Intent intent = new Intent(pgVentana.this, buscador.class);
                 startActivity(intent);
             }
         });
@@ -41,20 +46,20 @@ public class hgVentana extends AppCompatActivity {
         paginaHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(hgVentana.this, MainActivity.class);
+                Intent intent = new Intent(pgVentana.this, MainActivity.class);
                 startActivity(intent);
             }
         });
+
 
         ImageView opciones = findViewById(R.id.opciones);
 
         opciones.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(hgVentana.this, opcionesVentana.class);
+                Intent intent = new Intent(pgVentana.this, opcionesVentana.class);
                 startActivity(intent);
             }
         });
     }
-
 }

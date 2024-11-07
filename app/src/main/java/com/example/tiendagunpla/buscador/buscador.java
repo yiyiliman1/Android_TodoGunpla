@@ -1,12 +1,10 @@
-package com.example.tiendagunpla;
+package com.example.tiendagunpla.buscador;
 
-import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.SearchView;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,7 +14,8 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.w3c.dom.Text;
+import com.example.tiendagunpla.inicio.MainActivity;
+import com.example.tiendagunpla.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,10 +54,10 @@ public class buscador extends AppCompatActivity {
         pr.add(new Productos("MG",R.drawable.mg_barbatos,"Barbatos"));
 
         recyvlerView.setLayoutManager(new LinearLayoutManager(this));
-        recyvlerView.setAdapter(new MiAdpatador(getApplicationContext(),pr));
+        recyvlerView.setAdapter(new MiAdaptador(getApplicationContext(),pr));
 
         // Buscador de productos
-        MiAdpatador miAdaptador = new MiAdpatador(this, pr);
+        MiAdaptador miAdaptador = new MiAdaptador(this, pr);
         recyvlerView.setAdapter(miAdaptador);
 
         SearchView searchView = findViewById(R.id.sV);

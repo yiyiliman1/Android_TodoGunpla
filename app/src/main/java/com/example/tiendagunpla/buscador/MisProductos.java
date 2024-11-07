@@ -1,4 +1,4 @@
-package com.example.tiendagunpla;
+package com.example.tiendagunpla.buscador;
 
 import android.view.View;
 import android.widget.ImageView;
@@ -6,6 +6,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.tiendagunpla.R;
 
 /**
  * Clase MisProductos que representa cada ítem de la lista dentro de un RecyclerView.

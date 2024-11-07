@@ -1,4 +1,4 @@
-package com.example.tiendagunpla;
+package com.example.tiendagunpla.modelos;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,25 +12,31 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class rgVentana extends AppCompatActivity {
+import com.example.tiendagunpla.R;
+import com.example.tiendagunpla.buscador.buscador;
+import com.example.tiendagunpla.inicio.MainActivity;
+import com.example.tiendagunpla.opcionesVentana;
+
+public class hgVentana extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_rg_ventana);
+        setContentView(R.layout.activity_hg_ventana);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
         // Te lleva al buscador
         TextView bsc = findViewById(R.id.buscador);
 
         bsc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(rgVentana.this, buscador.class);
+                Intent intent = new Intent(hgVentana.this, buscador.class);
                 startActivity(intent);
             }
         });
@@ -40,7 +46,7 @@ public class rgVentana extends AppCompatActivity {
         paginaHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(rgVentana.this, MainActivity.class);
+                Intent intent = new Intent(hgVentana.this, MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -50,9 +56,10 @@ public class rgVentana extends AppCompatActivity {
         opciones.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(rgVentana.this, opcionesVentana.class);
+                Intent intent = new Intent(hgVentana.this, opcionesVentana.class);
                 startActivity(intent);
             }
         });
     }
+
 }

@@ -1,4 +1,4 @@
-package com.example.tiendagunpla;
+package com.example.tiendagunpla.buscador;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,13 +7,15 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.tiendagunpla.R;
+
 import java.util.List;
 
 /**
  * Clase MiAdpatador que es el adaptador para el RecyclerView.
  * Su función es vincular los datos (productos) con las vistas que se mostrarán en la lista del RecyclerView.
  */
-public class MiAdpatador extends RecyclerView.Adapter<MisProductos> {
+public class MiAdaptador extends RecyclerView.Adapter<MisProductos> {
 
     // Contexto de la aplicación
     Context context;
@@ -24,7 +26,7 @@ public class MiAdpatador extends RecyclerView.Adapter<MisProductos> {
      * Constructor del adaptador. Inicializa el contexto y la lista de productos.
      *
      */
-    public MiAdpatador(Context context, List<Productos> pr) {
+    public MiAdaptador(Context context, List<Productos> pr) {
         this.context = context;
         this.pr = pr;
     }
