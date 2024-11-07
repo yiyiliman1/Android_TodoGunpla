@@ -10,7 +10,7 @@
 
     <SearchView
         android:id="@+id/sV"
-        android:layout_width="355dp"
+        android:layout_width="match_parent"
         android:layout_height="42dp"
         android:background="@drawable/header_style"
         android:queryHint="Buscar modelo/gunpla"
