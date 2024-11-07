@@ -286,6 +286,8 @@
         android:onClick="Registro"
         android:text="Registrarse"
         android:textSize="10dp"
+        app:backgroundTint="@null"
+        android:background="@drawable/color_button"
         app:layout_constraintBottom_toTopOf="@+id/guideline30"
         app:layout_constraintEnd_toStartOf="@+id/guideline22"
         app:layout_constraintTop_toTopOf="@+id/guideline17" />

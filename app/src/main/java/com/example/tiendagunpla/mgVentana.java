@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +24,18 @@ public class mgVentana extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        // Te lleva al buscador
+        TextView bsc = findViewById(R.id.buscador);
+
+        bsc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mgVentana.this, buscador.class);
+                startActivity(intent);
+            }
+        });
+
         ImageView paginaHome = findViewById(R.id.paginaHome);
 
         paginaHome.setOnClickListener(new View.OnClickListener() {

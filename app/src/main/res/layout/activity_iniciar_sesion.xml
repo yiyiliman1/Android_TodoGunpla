@@ -169,6 +169,7 @@
         android:inputType="text"
         android:textSize="10dp"
         android:padding="10dp"
+        app:backgroundTint="@null"
         android:background="@drawable/inicio_style"
         app:layout_constraintBottom_toTopOf="@+id/guideline25"
         app:layout_constraintEnd_toStartOf="@+id/guideline22"
@@ -247,6 +248,8 @@
         android:onClick="iniSesi"
         android:text="Iniciar Sesión"
         android:textSize="10dp"
+        app:backgroundTint="@null"
+        android:background="@drawable/color_button"
         app:layout_constraintBottom_toTopOf="@+id/guideline31"
         app:layout_constraintEnd_toStartOf="@+id/guideline22"
         app:layout_constraintTop_toTopOf="@+id/guideline28" />

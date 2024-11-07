@@ -80,7 +80,7 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.14" />
 
-    <EditText
+    <TextView
         android:id="@+id/buscador"
         android:layout_width="238dp"
         android:layout_height="46dp"
@@ -88,6 +88,7 @@
         android:gravity="center"
         android:inputType="text"
         android:hint="Buscador"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/cajaBuscador"
         app:layout_constraintEnd_toEndOf="@+id/cajaBuscador"
         app:layout_constraintStart_toStartOf="@+id/cajaBuscador"
