@@ -1,6 +1,8 @@
 package com.example.tiendagunpla;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -9,6 +11,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.example.tiendagunpla.buscador.buscador;
+import com.example.tiendagunpla.inicio.MainActivity;
 
 public class detalle_producto extends AppCompatActivity {
 
@@ -21,6 +26,17 @@ public class detalle_producto extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        // atras
+        ImageView aT = findViewById(R.id.atras);
+
+        aT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(detalle_producto.this, MainActivity.class);
+                startActivity(intent);
+            }
         });
 
         ImageView productoImagen = findViewById(R.id.productoImagen);

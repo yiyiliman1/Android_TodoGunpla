@@ -35,23 +35,26 @@ public class buscador extends AppCompatActivity {
 
         });
 
-        // logOut
-        ImageView hM = findViewById(R.id.homeMain);
-
-        hM.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(buscador.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
         RecyclerView recyvlerView = findViewById(R.id.lstPr);
 
         List<Productos> pr = new ArrayList<Productos>();
-        pr.add(new Productos("RG",R.drawable.rg_freedom,"Freedom"));
-        pr.add(new Productos("RG",R.drawable.rgdestiny,"Destiny"));
-        pr.add(new Productos("MG",R.drawable.mg_barbatos,"Barbatos"));
+        pr.add(new Productos("FG",R.drawable.fg_gundam,"RX-78-2 Gundam"));
+        pr.add(new Productos("FG",R.drawable.fg_exia,"GN-001 Gundam Exia"));
+        pr.add(new Productos("FG",R.drawable.fg_kyrios,"GN-003 Gundam Kyrios"));
+        pr.add(new Productos("FG",R.drawable.fg_dynames,"GN-002 Gundam Dynames"));
+        pr.add(new Productos("FG",R.drawable.fg_virtue,"GN-005 Gundam Virtue"));
+        pr.add(new Productos("HG",R.drawable.hg_gundam_original,"RX-78-2 Gundam"));
+        pr.add(new Productos("HG",R.drawable.hg_strike_freedom,"Perfect Strike Freedom Rouge Gundam"));
+        pr.add(new Productos("HG",R.drawable.hg_oo,"GN-0000 00 Gundam"));
+        pr.add(new Productos("RG",R.drawable.rgexia,"GN-001 Gundam Exia"));
+        pr.add(new Productos("RG",R.drawable.rg_freedom,"ZGMF-X10A Freedom Gundam"));
+        pr.add(new Productos("RG",R.drawable.rgdestiny,"ZGMF-X42S Destiny Gundam"));
+        pr.add(new Productos("RG",R.drawable.rgimpul,"ZGMF-X56S Impulse Gundam"));
+        pr.add(new Productos("MG",R.drawable.mg_barbatos,"ASW-G-08 Gundam Barbatos"));
+        pr.add(new Productos("MG",R.drawable.mg_buster,"GAT-X103 Buster Gundam"));
+        pr.add(new Productos("MG",R.drawable.mg_freedom,"ZGMF-X10A Freedom Gundam"));
+        pr.add(new Productos("PG",R.drawable.pg_freedom,"ZGMF-X20A Strike Freedom Gundam"));
+        pr.add(new Productos("PG",R.drawable.pg_exia,"GN-001 Gundam Exia"));
 
         recyvlerView.setLayoutManager(new LinearLayoutManager(this));
         recyvlerView.setAdapter(new MiAdaptador(getApplicationContext(),pr));
