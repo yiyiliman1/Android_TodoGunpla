@@ -120,14 +120,14 @@
                 android:text="Los Gundam Perfect Grade (PG) son modelos a escala 1/60, considerados los más detallados y avanzados dentro de las líneas de Gunpla. Con una construcción extremadamente compleja, incluyen un esqueleto interno completo, iluminación LED opcional y una increíble fidelidad en cada pieza. Los PG están dirigidos a modelistas experimentados que buscan la máxima calidad y realismo en grandes escalas, resultando en impresionantes exhibiciones que capturan todos los detalles del mecha."/>
 
             <ImageView
-                android:id="@+id/imageView7"
+                android:id="@+id/pg_freedom"
                 android:layout_width="195dp"
                 android:layout_height="140dp"
                 android:layout_marginTop="40dp"
                 app:srcCompat="@drawable/pg_freedom" />
 
             <ImageView
-                android:id="@+id/imageView8"
+                android:id="@+id/pg_exia"
                 android:layout_width="195dp"
                 android:layout_height="140dp"
                 android:layout_marginTop="40dp"

@@ -14,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.tiendagunpla.R;
 import com.example.tiendagunpla.buscador.buscador;
+import com.example.tiendagunpla.detalle_producto;
 import com.example.tiendagunpla.inicio.MainActivity;
 import com.example.tiendagunpla.opcionesVentana;
 
@@ -61,5 +62,18 @@ public class pgVentana extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        // para cada producto
+        ImageView pg_freedom = findViewById(R.id.pg_freedom);
+        ImageView pg_exia = findViewById(R.id.pg_exia);
+
+        pg_freedom.setOnClickListener(v -> abrirDetalles("pg_freedom"));
+        pg_exia.setOnClickListener(v -> abrirDetalles("pg_exia"));
+
+    }
+
+    private void abrirDetalles(String productoId) {
+        Intent intent = new Intent(this, detalle_producto.class);
+        intent.putExtra("producto_id", productoId);
+        startActivity(intent);
     }
 }

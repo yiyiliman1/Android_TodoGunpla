@@ -14,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.tiendagunpla.R;
 import com.example.tiendagunpla.buscador.buscador;
+import com.example.tiendagunpla.detalle_producto;
 import com.example.tiendagunpla.inicio.MainActivity;
 import com.example.tiendagunpla.opcionesVentana;
 
@@ -59,5 +60,21 @@ public class rgVentana extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        // para cada producto
+        ImageView rg_freedom = findViewById(R.id.rgFreedom);
+        ImageView rg_exia = findViewById(R.id.rgExia);
+        ImageView rg_destiny = findViewById(R.id.rgDestiny);
+        ImageView rg_impulse= findViewById(R.id.rgImpulse);
+
+        rg_freedom.setOnClickListener(v -> abrirDetalles("rg_freedom"));
+        rg_exia.setOnClickListener(v -> abrirDetalles("rg_exia"));
+        rg_destiny.setOnClickListener(v -> abrirDetalles("rg_destiny"));
+        rg_impulse.setOnClickListener(v -> abrirDetalles("rg_impulse"));
+    }
+
+    private void abrirDetalles(String productoId) {
+        Intent intent = new Intent(this, detalle_producto.class);
+        intent.putExtra("producto_id", productoId);
+        startActivity(intent);
     }
 }

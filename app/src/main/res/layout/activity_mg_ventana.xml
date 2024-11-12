@@ -120,21 +120,21 @@
                 android:textColor="@color/black"
                 android:text="Los Gundam Master Grade (MG) son modelos a escala 1/100 que ofrecen un alto nivel de detalle y una construcción más compleja en comparación con líneas más básicas. Estos kits incluyen piezas más grandes, un esqueleto interno robusto y una excelente articulación, brindando una experiencia de ensamblaje más detallada y avanzada. Los MG son populares entre modelistas que buscan un equilibrio entre tamaño, precisión y calidad, con resultados que destacan en exhibiciones."/>
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/mg_freedom"
                 android:layout_width="283dp"
                 android:layout_height="211dp"
                 android:layout_marginTop="40dp"
                 app:srcCompat="@drawable/mg_freedom" />
 
             <ImageView
-                android:id="@+id/imageView5"
+                android:id="@+id/mg_buster"
                 android:layout_width="195dp"
                 android:layout_height="140dp"
                 android:layout_marginTop="40dp"
                 app:srcCompat="@drawable/mg_buster" />
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/mg_barbatos"
                 android:layout_width="195dp"
                 android:layout_height="140dp"
                 android:layout_marginTop="40dp"
