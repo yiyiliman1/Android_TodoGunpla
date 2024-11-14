@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tiendagunpla.inicio.MainActivity;
 import com.example.tiendagunpla.R;
+import com.example.tiendagunpla.modelos.fgVentana;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +34,16 @@ public class buscador extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
 
+        });
+
+        ImageView paginaHome = findViewById(R.id.homeMain);
+
+        paginaHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(buscador.this, MainActivity.class);
+                startActivity(intent);
+            }
         });
 
         RecyclerView recyvlerView = findViewById(R.id.lstPr);

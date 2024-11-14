@@ -17,7 +17,6 @@ import com.example.tiendagunpla.buscador.buscador;
 import com.example.tiendagunpla.modelos.fgVentana;
 import com.example.tiendagunpla.modelos.hgVentana;
 import com.example.tiendagunpla.modelos.mgVentana;
-import com.example.tiendagunpla.opcionesVentana;
 import com.example.tiendagunpla.modelos.pgVentana;
 import com.example.tiendagunpla.modelos.rgVentana;
 
@@ -44,17 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 finish(); // cierra la sesión actual
             }
         });
-
-        // Te lleva a la ventana Opciones
-        ImageView opciones = findViewById(R.id.opciones);
-
-        opciones.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, opcionesVentana.class);
-                startActivity(intent);
-            }
-        });
+        
 
         // Te lleva al buscador
         TextView bsc = findViewById(R.id.buscador);

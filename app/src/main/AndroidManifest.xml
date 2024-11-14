@@ -13,7 +13,7 @@
         android:theme="@style/Theme.TiendaGunpla"
         tools:targetApi="31">
         <activity
-            android:name=".detalle_producto"
+            android:name=".buscador.detalle_producto"
             android:exported="false" />
         <activity
             android:name=".buscador.buscador"

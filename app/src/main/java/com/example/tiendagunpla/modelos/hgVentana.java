@@ -14,9 +14,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.tiendagunpla.R;
 import com.example.tiendagunpla.buscador.buscador;
-import com.example.tiendagunpla.detalle_producto;
+import com.example.tiendagunpla.buscador.detalle_producto;
 import com.example.tiendagunpla.inicio.MainActivity;
-import com.example.tiendagunpla.opcionesVentana;
 
 public class hgVentana extends AppCompatActivity {
 
@@ -52,15 +51,7 @@ public class hgVentana extends AppCompatActivity {
             }
         });
 
-        ImageView opciones = findViewById(R.id.opciones);
 
-        opciones.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(hgVentana.this, opcionesVentana.class);
-                startActivity(intent);
-            }
-        });
         // para cada producto
         ImageView hgGundam = findViewById(R.id.hg_gundam);
         ImageView hgoo = findViewById(R.id.hg_oo);

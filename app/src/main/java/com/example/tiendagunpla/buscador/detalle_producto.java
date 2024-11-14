@@ -1,4 +1,4 @@
-package com.example.tiendagunpla;
+package com.example.tiendagunpla.buscador;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.tiendagunpla.buscador.buscador;
+import com.example.tiendagunpla.R;
 import com.example.tiendagunpla.inicio.MainActivity;
 
 public class detalle_producto extends AppCompatActivity {
