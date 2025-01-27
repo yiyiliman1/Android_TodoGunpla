@@ -35,7 +35,7 @@ public class buscador extends AppCompatActivity {
             return insets;
 
         });
-
+        // atras
         ImageView paginaHome = findViewById(R.id.homeMain);
 
         paginaHome.setOnClickListener(new View.OnClickListener() {
@@ -45,9 +45,10 @@ public class buscador extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        // Encuentra el RecyclerView donde se listarán los productos.
         RecyclerView recyvlerView = findViewById(R.id.lstPr);
 
+        // Crea una lista de productos para mostrar.
         List<Productos> pr = new ArrayList<Productos>();
         pr.add(new Productos("FG",R.drawable.fg_gundam,"RX-78-2 Gundam"));
         pr.add(new Productos("FG",R.drawable.fg_exia,"GN-001 Gundam Exia"));
@@ -67,31 +68,44 @@ public class buscador extends AppCompatActivity {
         pr.add(new Productos("PG",R.drawable.pg_freedom,"ZGMF-X20A Strike Freedom Gundam"));
         pr.add(new Productos("PG",R.drawable.pg_exia,"GN-001 Gundam Exia"));
 
+        // Configura el RecyclerView con un layout manager lineal.
         recyvlerView.setLayoutManager(new LinearLayoutManager(this));
-        recyvlerView.setAdapter(new MiAdaptador(getApplicationContext(),pr));
 
-        // Buscador de productos
+        // Establece un adaptador para el RecyclerView.
+        recyvlerView.setAdapter(new MiAdaptador(getApplicationContext(), pr));
+
+        // Crea una instancia del adaptador para el RecyclerView.
         MiAdaptador miAdaptador = new MiAdaptador(this, pr);
+
+        // Establece el adaptador en el RecyclerView.
         recyvlerView.setAdapter(miAdaptador);
 
+        // Configura el comportamiento del SearchView para filtrar los productos.
         SearchView searchView = findViewById(R.id.sV);
+
+        // Establece un Listener para cuando el usuario escriba en el SearchView.
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                return false;
+                return false; // No hace nada cuando se envía el texto.
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
+                // Crea una lista filtrada de productos.
                 List<Productos> listaFiltrada = new ArrayList<>();
+
+                // Recorre la lista de productos y los agrega a la lista filtrada si coinciden con el texto de búsqueda.
                 for (Productos producto : pr) {
                     if (producto.getNombre().toLowerCase().contains(newText.toLowerCase()) ||
                             producto.getModelo().toLowerCase().contains(newText.toLowerCase())) {
                         listaFiltrada.add(producto);
                     }
                 }
+
+                // Filtra la lista en el adaptador para que se muestren solo los productos que coinciden.
                 miAdaptador.filtrarLista(listaFiltrada);
-                return true;
+                return true; // Retorna verdadero porque el texto fue procesado.
             }
         });
     }
