@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PaginaInicial">
+    tools:context=".inicio.PaginaInicial">
 
     <ImageView
         android:id="@+id/imagefondo"
@@ -46,7 +46,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/logOut"
+        android:id="@+id/paginaHome"
         android:layout_width="72dp"
         android:layout_height="46dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
@@ -84,54 +84,55 @@
         app:layout_constraintTop_toTopOf="@+id/cajaBuscador"/>
 
     <ScrollView
-        android:layout_width="410dp"
-        android:layout_height="628dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2">
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@+id/guideline2"
+        app:layout_constraintBottom_toTopOf="@+id/footer">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="160dp">
-
-            <ImageView
-                android:id="@+id/rgL"
-                android:layout_width="match_parent"
-                android:layout_height="140dp"
-                android:layout_marginTop="20dp"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/tienda" />
-
-            <TextView
-                android:id="@+id/textodentroigen"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|start"
-                android:layout_margin="8dp"
-                android:background="@android:color/transparent"
-                android:fontFamily="@font/dynapuff"
-                android:text="Tienda"
-                android:shadowColor="@android:color/black"
-                android:shadowDx="5"
-                android:shadowDy="5"
-                android:shadowRadius="5"
-                android:textColor="@color/white"
-                android:textSize="30sp" />
-
-        </FrameLayout>
             <FrameLayout
+                android:id="@+id/IMG_tienda"
                 android:layout_width="match_parent"
                 android:layout_height="160dp">
 
                 <ImageView
-                    android:id="@+id/rgLogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/tienda" />
+
+                <TextView
+                    android:id="@+id/textodentroigen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|start"
+                    android:layout_margin="8dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/dynapuff"
+                    android:shadowColor="@android:color/black"
+                    android:shadowDx="5"
+                    android:shadowDy="5"
+                    android:shadowRadius="5"
+                    android:text="Tienda"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/IMG_montar"
+                android:layout_width="match_parent"
+                android:layout_height="160dp">
+
+                <ImageView
+
                     android:layout_width="match_parent"
                     android:layout_height="160dp"
                     android:scaleType="centerCrop"
@@ -145,21 +146,22 @@
                     android:layout_margin="8dp"
                     android:background="@android:color/transparent"
                     android:fontFamily="@font/dynapuff"
-                    android:text="Aprende a montar"
                     android:shadowColor="@android:color/black"
                     android:shadowDx="5"
                     android:shadowDy="5"
                     android:shadowRadius="5"
+                    android:text="Aprende a montar"
                     android:textColor="@color/white"
                     android:textSize="30sp" />
 
             </FrameLayout>
+
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="160dp">
 
                 <ImageView
-                    android:id="@+id/pintar"
+                    android:id="@+id/IMG_pintar"
                     android:layout_width="match_parent"
                     android:layout_height="160dp"
                     android:scaleType="centerCrop"
@@ -173,21 +175,22 @@
                     android:layout_margin="8dp"
                     android:background="@android:color/transparent"
                     android:fontFamily="@font/dynapuff"
-                    android:text="Aprende a pintar"
                     android:shadowColor="@android:color/black"
                     android:shadowDx="5"
                     android:shadowDy="5"
                     android:shadowRadius="5"
+                    android:text="Aprende a pintar"
                     android:textColor="@color/white"
                     android:textSize="30sp" />
 
             </FrameLayout>
+
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="160dp">
 
                 <ImageView
-                    android:id="@+id/pintr"
+                    android:id="@+id/IMG_comun"
                     android:layout_width="match_parent"
                     android:layout_height="160dp"
                     android:scaleType="centerCrop"
@@ -201,97 +204,68 @@
                     android:layout_margin="8dp"
                     android:background="@android:color/transparent"
                     android:fontFamily="@font/dynapuff"
+                    android:shadowColor="@android:color/black"
+                    android:shadowDx="5"
+                    android:shadowDy="5"
+                    android:shadowRadius="5"
                     android:text="Comunidad"
-                    android:shadowColor="@android:color/black"
-                    android:shadowDx="5"
-                    android:shadowDy="5"
-                    android:shadowRadius="5"
                     android:textColor="@color/white"
                     android:textSize="30sp" />
 
             </FrameLayout>
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="160dp">
-
-                <ImageView
-                    android:id="@+id/intar"
-                    android:layout_width="match_parent"
-                    android:layout_height="160dp"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/noticias" />
-
-                <TextView
-                    android:id="@+id/tetodentropintar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|start"
-                    android:layout_margin="8dp"
-                    android:background="@android:color/transparent"
-                    android:fontFamily="@font/dynapuff"
-                    android:text="últimas noticias"
-                    android:shadowColor="@android:color/black"
-                    android:shadowDx="5"
-                    android:shadowDy="5"
-                    android:shadowRadius="5"
-                    android:textColor="@color/white"
-                    android:textSize="30sp" />
-
-            </FrameLayout>
-
-            <LinearLayout
-                android:id="@+id/footer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@color/black"
-                android:padding="16dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center"
-                    android:layout_marginBottom="8dp">
-
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/inst"
-                        android:contentDescription="Facebook"
-                        android:layout_margin="8dp" />
-
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/twt"
-                        android:contentDescription="Twitter"
-                        android:layout_margin="8dp" />
-
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/yt"
-                        android:contentDescription="YouTube"
-                        android:layout_margin="8dp" />
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Política de Privacidad"
-                    android:textColor="@color/white"
-                    android:gravity="center"
-                    android:textSize="12sp" />
-
-                <!-- añadir en la parte derecha -->
-            </LinearLayout>
         </LinearLayout>
 
     </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="8dp"
+                android:contentDescription="Facebook"
+                android:src="@drawable/inst" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="8dp"
+                android:contentDescription="Twitter"
+                android:src="@drawable/twt" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="8dp"
+                android:contentDescription="YouTube"
+                android:src="@drawable/yt" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Política de Privacidad"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

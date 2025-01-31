@@ -33,14 +33,13 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
         // logOut
-        ImageView lOut = findViewById(R.id.logOut);
+        ImageView lOut = findViewById(R.id.paginaHome);
 
         lOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Inicio.class);
+                Intent intent = new Intent(MainActivity.this, PaginaInicial.class);
                 startActivity(intent);
-                finish(); // cierra la sesión actual
             }
         });
         
@@ -79,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Te lleva a la ventana RG
-        ImageView rgLogo = findViewById(R.id.rgLogo);
+        ImageView rgLogo = findViewById(R.id.IMG_montar);
 
         rgLogo.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tiendagunpla.inicio.MainActivity;
 import com.example.tiendagunpla.R;
+import com.example.tiendagunpla.inicio.PaginaInicial;
 import com.example.tiendagunpla.modelos.fgVentana;
 
 import java.util.ArrayList;
@@ -41,7 +42,7 @@ public class buscador extends AppCompatActivity {
         paginaHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(buscador.this, MainActivity.class);
+                Intent intent = new Intent(buscador.this, PaginaInicial.class);
                 startActivity(intent);
             }
         });

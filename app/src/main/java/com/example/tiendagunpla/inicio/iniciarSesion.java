@@ -71,7 +71,7 @@ public class iniciarSesion extends AppCompatActivity {
                                     // Contraseñas coinciden, navegar a la actividad principal
                                     Toast.makeText(iniciarSesion.this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
 
-                                    Intent intent = new Intent(iniciarSesion.this, MainActivity.class);
+                                    Intent intent = new Intent(iniciarSesion.this, PaginaInicial.class);
                                     startActivity(intent);
                                 } else {
                                     // Contraseña incorrecta

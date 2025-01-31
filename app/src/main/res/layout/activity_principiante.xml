@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".modelos.rgVentana">
+    tools:context=".Montar.Principiante">
 
     <ImageView
         android:id="@+id/imagefondo"
@@ -13,8 +13,8 @@
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/fondoapp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="31dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="32dp" />
 
     <TextView
         android:id="@+id/cajaBuscador"
@@ -33,13 +33,14 @@
         android:layout_width="match_parent"
         android:layout_height="68dp"
         android:background="@drawable/header_style"
+        android:fontFamily="@font/dynapuff"
         android:gravity="center"
-        android:text="TodoGunpla"
+        android:text="GundamUniverse"
         android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imagefondo"
         app:layout_constraintVertical_bias="0.0" />
@@ -98,44 +99,66 @@
             android:gravity="center_horizontal">
 
             <TextView
-                android:id="@+id/textoIniciarsesion"
                 android:layout_width="341dp"
-                android:layout_height="184dp"
+                android:layout_height="120dp"
                 android:layout_marginTop="10dp"
                 android:autoSizeTextType="uniform"
-                android:textColor="@color/black"
                 android:background="@drawable/header_style"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="Los Gundam Real Grade (RG) son modelos a escala 1/144 que combinan alta complejidad y detalles finos, diseñados para ofrecer una experiencia de construcción avanzada. Con un enfoque en realismo, estos kits incluyen un esqueleto interno avanzado y piezas altamente detalladas, lo que los hace ideales para modelistas experimentados. La línea RG destaca por su precisión, articulación y calidad similar a escalas más grandes, pero en un formato más compacto." />
+                android:text="En este nivel, aprenderás los conceptos básicos para ensamblar tu primera maqueta sin necesidad de pegamento ni pintura. Te familiarizarás con las herramientas, el manual de instrucciones y las técnicas esenciales para que tu modelo se vea limpio y bien armado."
+                android:textColor="@color/black">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="341dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="10dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/header_style"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Antes de comenzar, asegúrate de contar con las siguientes herramientas:\n
+                \nAlicates de corte (Nippers): Te permitirán cortar las piezas del marco sin dañarlas.\n
+                \nCutter o bisturí de modelismo: Para eliminar pequeñas rebabas o imperfecciones.\n
+                \nLima o lijas de grano fino (800-1000): Ayudan a suavizar los bordes y eliminar marcas de corte.\n
+                \n de corte: Protege tu mesa y facilita un trabajo más preciso.\n
+                \nPinzas: Son útiles para aplicar stickers o sostener piezas pequeñas."
+                android:textColor="@color/black">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="341dp"
+                android:layout_height="600dp"
+                android:layout_marginTop="10dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/header_style"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="1️⃣ Conociendo las piezas y el manual\n
+                \nAntes de cortar cualquier pieza, abre el manual de instrucciones. Las maquetas vienen en marcos de plástico llamados 'runners', donde cada pieza tiene un número asignado. Usa el manual para ubicar las piezas correctas antes de cortarlas.\n
+
+                \n2️⃣ Cómo cortar y desprender las piezas\n
+                \nCuando encuentres una pieza que necesitas, usa los alicates de corte para separarla del marco. Es recomendable hacer dos cortes: el primero un poco alejado de la pieza y el segundo más cerca para evitar dañar el plástico. Si quedan pequeñas imperfecciones, líjalas suavemente con una lima o lija fina.\n
+
+                \n3️⃣ Montaje sin pegamento (Snap-fit)\n
+                \nMuchas maquetas modernas, como los Gunpla, utilizan un sistema de ensamblaje llamado Snap-fit, lo que significa que las piezas encajan perfectamente sin necesidad de pegamento. Sigue las instrucciones para unir las piezas sin aplicar demasiada fuerza, asegurándote de que todas las partes se conecten correctamente.\n
+
+                \n4️⃣ Aplicación de stickers y calcomanías básicas\n
+                \nAlgunas maquetas incluyen stickers adhesivos para agregar detalles. Usa unas pinzas para aplicarlos con precisión y evita tocar el pegamento con los dedos. Si el sticker tiene burbujas, presiona suavemente con un bastoncillo de algodón."
+                android:textColor="@color/black">
+
+            </TextView>
 
             <ImageView
-                android:id="@+id/rgFreedom"
-                android:layout_width="195dp"
-                android:layout_height="140dp"
-                android:layout_marginTop="40dp"
-                app:srcCompat="@drawable/rg_freedom" />
-
-            <ImageView
-                android:id="@+id/rgExia"
-                android:layout_width="195dp"
-                android:layout_height="140dp"
-                android:layout_marginTop="40dp"
-                app:srcCompat="@drawable/rgexia" />
-
-            <ImageView
-                android:id="@+id/rgDestiny"
-                android:layout_width="195dp"
-                android:layout_height="140dp"
-                android:layout_marginTop="40dp"
-                app:srcCompat="@drawable/rgdestiny" />
-
-            <ImageView
-                android:id="@+id/rgImpulse"
-                android:layout_width="195dp"
-                android:layout_height="140dp"
-                android:layout_marginTop="40dp"
-                app:srcCompat="@drawable/rgimpul" />
+                android:id="@+id/thumbnail"
+                android:layout_width="341dp"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:layout_margin="10dp"
+                android:src="@drawable/princi" />
 
         </LinearLayout>
 
@@ -163,7 +186,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_margin="8dp"
-                android:contentDescription="Facebook"
+                android:contentDescription="Instagram"
                 android:src="@drawable/inst" />
 
             <ImageView
@@ -210,14 +233,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.42407662" />
+        app:layout_constraintGuide_percent="0.37" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.66" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.74" />
-
+        app:layout_constraintGuide_percent="0.87" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

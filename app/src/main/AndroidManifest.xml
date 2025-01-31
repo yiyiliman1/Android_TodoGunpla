@@ -13,7 +13,13 @@
         android:theme="@style/Theme.TiendaGunpla"
         tools:targetApi="31">
         <activity
-            android:name=".PaginaInicial"
+            android:name=".Montar.Principiante"
+            android:exported="false" />
+        <activity
+            android:name=".Montar.MontarInicio"
+            android:exported="false" />
+        <activity
+            android:name=".inicio.PaginaInicial"
             android:exported="false" />
         <activity
             android:name=".buscador.detalle_producto"
@@ -25,16 +31,10 @@
             android:name=".inicio.iniciarSesion"
             android:exported="false" />
         <activity
-            android:name=".sobreNosotros"
-            android:exported="false" />
-        <activity
             android:name=".inicio.crearCuenta"
             android:exported="false" />
         <activity
             android:name=".inicio.MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".opcionesVentana"
             android:exported="false" />
         <activity
             android:name=".modelos.pgVentana"

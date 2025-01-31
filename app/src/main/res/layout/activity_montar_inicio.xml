@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".modelos.rgVentana">
+    tools:context=".Montar.MontarInicio">
 
     <ImageView
         android:id="@+id/imagefondo"
@@ -13,8 +13,8 @@
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/fondoapp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="31dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="32dp" />
 
     <TextView
         android:id="@+id/cajaBuscador"
@@ -33,13 +33,14 @@
         android:layout_width="match_parent"
         android:layout_height="68dp"
         android:background="@drawable/header_style"
+        android:fontFamily="@font/dynapuff"
         android:gravity="center"
-        android:text="TodoGunpla"
+        android:text="GundamUniverse"
         android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imagefondo"
         app:layout_constraintVertical_bias="0.0" />
@@ -82,64 +83,52 @@
         app:layout_constraintStart_toStartOf="@+id/cajaBuscador"
         app:layout_constraintTop_toTopOf="@+id/cajaBuscador"/>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:fillViewport="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/footer"
-        app:layout_constraintStart_toStartOf="parent"
+    <TextView
+        android:id="@+id/GoPrincipiante"
+        android:layout_width="245dp"
+        android:layout_height="72dp"
+        android:background="@drawable/header_style"
+        android:fontFamily="@font/dynapuff"
+        android:gravity="center"
+        android:text="Principiante"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="@+id/guideline2">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal">
+    </TextView>
 
-            <TextView
-                android:id="@+id/textoIniciarsesion"
-                android:layout_width="341dp"
-                android:layout_height="184dp"
-                android:layout_marginTop="10dp"
-                android:autoSizeTextType="uniform"
-                android:textColor="@color/black"
-                android:background="@drawable/header_style"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="Los Gundam Real Grade (RG) son modelos a escala 1/144 que combinan alta complejidad y detalles finos, diseñados para ofrecer una experiencia de construcción avanzada. Con un enfoque en realismo, estos kits incluyen un esqueleto interno avanzado y piezas altamente detalladas, lo que los hace ideales para modelistas experimentados. La línea RG destaca por su precisión, articulación y calidad similar a escalas más grandes, pero en un formato más compacto." />
+    <TextView
+        android:layout_width="245dp"
+        android:layout_height="72dp"
+        android:background="@drawable/header_style"
+        android:fontFamily="@font/dynapuff"
+        android:gravity="center"
+        android:text="Intermedio"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/guideline5">
 
-            <ImageView
-                android:id="@+id/rgFreedom"
-                android:layout_width="195dp"
-                android:layout_height="140dp"
-                android:layout_marginTop="40dp"
-                app:srcCompat="@drawable/rg_freedom" />
+    </TextView>
 
-            <ImageView
-                android:id="@+id/rgExia"
-                android:layout_width="195dp"
-                android:layout_height="140dp"
-                android:layout_marginTop="40dp"
-                app:srcCompat="@drawable/rgexia" />
+    <TextView
+        android:layout_width="245dp"
+        android:layout_height="72dp"
+        android:background="@drawable/header_style"
+        android:fontFamily="@font/dynapuff"
+        android:gravity="center"
+        android:text="Avanzado"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/guideline6">
 
-            <ImageView
-                android:id="@+id/rgDestiny"
-                android:layout_width="195dp"
-                android:layout_height="140dp"
-                android:layout_marginTop="40dp"
-                app:srcCompat="@drawable/rgdestiny" />
-
-            <ImageView
-                android:id="@+id/rgImpulse"
-                android:layout_width="195dp"
-                android:layout_height="140dp"
-                android:layout_marginTop="40dp"
-                app:srcCompat="@drawable/rgimpul" />
-
-        </LinearLayout>
-
-    </ScrollView>
+    </TextView>
 
     <LinearLayout
         android:id="@+id/footer"
@@ -163,7 +152,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_margin="8dp"
-                android:contentDescription="Facebook"
+                android:contentDescription="Instagram"
                 android:src="@drawable/inst" />
 
             <ImageView
@@ -210,14 +199,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.42407662" />
+        app:layout_constraintGuide_percent="0.37" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.66" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.74" />
-
+        app:layout_constraintGuide_percent="0.87" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
