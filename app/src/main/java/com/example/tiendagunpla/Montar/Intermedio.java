@@ -18,20 +18,18 @@ import com.example.tiendagunpla.R;
 import com.example.tiendagunpla.inicio.MainActivity;
 import com.example.tiendagunpla.inicio.PaginaInicial;
 
-public class Principiante extends AppCompatActivity {
+public class Intermedio extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_principiante);
-
+        setContentView(R.layout.activity_intermedio);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
         WebView video = findViewById(R.id.webView);
         video.setWebViewClient(new WebViewClient());
 
@@ -48,14 +46,14 @@ public class Principiante extends AppCompatActivity {
 
         video.loadData(videoHtml, "text/html", "utf-8");
 
-
         ImageView Home = findViewById(R.id.paginaHome);
         Home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Principiante.this, PaginaInicial.class);
+                Intent intent = new Intent(Intermedio.this, PaginaInicial.class);
                 startActivity(intent);
             }
         });
     }
+
 }

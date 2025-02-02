@@ -14,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.tiendagunpla.R;
 import com.example.tiendagunpla.inicio.MainActivity;
+import com.example.tiendagunpla.inicio.PaginaInicial;
 
 public class MontarInicio extends AppCompatActivity {
 
@@ -32,7 +33,7 @@ public class MontarInicio extends AppCompatActivity {
         Home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MontarInicio.this, MainActivity.class);
+                Intent intent = new Intent(MontarInicio.this, PaginaInicial.class);
                 startActivity(intent);
             }
         });
@@ -42,6 +43,15 @@ public class MontarInicio extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MontarInicio.this, Principiante.class);
+                startActivity(intent);
+            }
+        });
+
+        TextView INT = findViewById(R.id.GoIntermedio);
+        INT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MontarInicio.this, Intermedio.class);
                 startActivity(intent);
             }
         });

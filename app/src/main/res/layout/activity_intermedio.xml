@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Montar.MontarInicio">
+    tools:context=".Montar.Intermedio">
 
     <ImageView
         android:id="@+id/imagefondo"
@@ -83,53 +83,87 @@
         app:layout_constraintStart_toStartOf="@+id/cajaBuscador"
         app:layout_constraintTop_toTopOf="@+id/cajaBuscador"/>
 
-    <TextView
-        android:id="@+id/GoPrincipiante"
-        android:layout_width="245dp"
-        android:layout_height="72dp"
-        android:background="@drawable/header_style"
-        android:fontFamily="@font/dynapuff"
-        android:gravity="center"
-        android:text="Principiante"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/footer"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2">
 
-    </TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
 
-    <TextView
-        android:id="@+id/GoIntermedio"
-        android:layout_width="245dp"
-        android:layout_height="72dp"
-        android:background="@drawable/header_style"
-        android:fontFamily="@font/dynapuff"
-        android:gravity="center"
-        android:text="Intermedio"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline6"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="@+id/guideline5">
+            <TextView
+                android:layout_width="341dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/header_style"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="En este nivel, los usuarios aprenderán técnicas más avanzadas para mejorar la estabilidad, la movilidad y los detalles estéticos de sus maquetas."
+                android:textColor="@color/black">
 
-    </TextView>
+            </TextView>
 
-    <TextView
-        android:layout_width="245dp"
-        android:layout_height="72dp"
-        android:background="@drawable/header_style"
-        android:fontFamily="@font/dynapuff"
-        android:gravity="center"
-        android:text="Avanzado"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline7"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="@+id/guideline6">
+            <TextView
+                android:layout_width="341dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/header_style"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="1️⃣ Lijado y eliminación de rebabas: Usa una lima fina o lija de 800-1000 para eliminar las imperfecciones de corte.\n
+                \n2️⃣ Panelado con marcador: Resalta los detalles de la maqueta aplicando un 'panel lining' en las líneas estructurales.\n
+                \n3️⃣ Lavado de piezas (opcional): Para eliminar residuos de fabricación, puedes limpiar las piezas con agua y jabón suave antes de ensamblarlas."
+                android:textColor="@color/black">
 
-    </TextView>
+            </TextView>
+
+            <TextView
+                android:layout_width="341dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/header_style"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="🔸 Pruebas en seco (Dry Fit) → Antes de unir las piezas con pegamento, ensambla sin presión para verificar el ajuste.\n
+                \n🔸 Pegamento en piezas opcionales → Algunas partes pueden fijarse con pegamento para evitar que se separen con el tiempo.\n
+                \n🔸 Refuerzo de articulaciones → Si algunas partes son muy flojas, usa cinta adhesiva delgada o barniz mate para darles más estabilidad.\n"
+                android:textColor="@color/black">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="341dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/header_style"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="🎨 Mejorando el color: Se pueden usar marcadores Gundam o pintura acrílica para pequeños retoques.\n
+                \n✏️ Sombras y desgastes: Se puede aplicar un poco de tiza pastel o pincel seco para crear efectos de desgaste en la maqueta."
+                android:textColor="@color/black">
+
+            </TextView>
+
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="341dp"
+                android:layout_height="200dp"
+                android:layout_margin="10dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <LinearLayout
         android:id="@+id/footer"

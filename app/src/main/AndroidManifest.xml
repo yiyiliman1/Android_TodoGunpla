@@ -13,6 +13,9 @@
         android:theme="@style/Theme.TiendaGunpla"
         tools:targetApi="31">
         <activity
+            android:name=".Montar.Intermedio"
+            android:exported="false" />
+        <activity
             android:name=".Montar.Principiante"
             android:exported="false" />
         <activity
