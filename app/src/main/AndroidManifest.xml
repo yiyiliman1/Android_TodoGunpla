@@ -13,6 +13,21 @@
         android:theme="@style/Theme.TiendaGunpla"
         tools:targetApi="31">
         <activity
+            android:name=".Pintar.PiAvanzado"
+            android:exported="false" />
+        <activity
+            android:name=".Pintar.PiIntermedio"
+            android:exported="false" />
+        <activity
+            android:name=".Pintar.PiPrincipiante"
+            android:exported="false" />
+        <activity
+            android:name=".Pintar.PintarInicio"
+            android:exported="false" />
+        <activity
+            android:name=".Montar.Avanzado"
+            android:exported="false" />
+        <activity
             android:name=".Montar.Intermedio"
             android:exported="false" />
         <activity

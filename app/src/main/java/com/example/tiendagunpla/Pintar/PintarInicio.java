@@ -1,4 +1,4 @@
-package com.example.tiendagunpla.Montar;
+package com.example.tiendagunpla.Pintar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,17 +12,20 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.tiendagunpla.Montar.Avanzado;
+import com.example.tiendagunpla.Montar.Intermedio;
+import com.example.tiendagunpla.Montar.MontarInicio;
+import com.example.tiendagunpla.Montar.Principiante;
 import com.example.tiendagunpla.R;
-import com.example.tiendagunpla.inicio.MainActivity;
 import com.example.tiendagunpla.inicio.PaginaInicial;
 
-public class MontarInicio extends AppCompatActivity {
+public class PintarInicio extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_montar_inicio);
+        setContentView(R.layout.activity_pintar_inicio);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -33,7 +36,7 @@ public class MontarInicio extends AppCompatActivity {
         Home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MontarInicio.this, PaginaInicial.class);
+                Intent intent = new Intent(PintarInicio.this, PaginaInicial.class);
                 startActivity(intent);
             }
         });
@@ -42,7 +45,7 @@ public class MontarInicio extends AppCompatActivity {
         PRI.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MontarInicio.this, Principiante.class);
+                Intent intent = new Intent(PintarInicio.this, PiPrincipiante.class);
                 startActivity(intent);
             }
         });
@@ -51,7 +54,7 @@ public class MontarInicio extends AppCompatActivity {
         INT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MontarInicio.this, Intermedio.class);
+                Intent intent = new Intent(PintarInicio.this, PiIntermedio.class);
                 startActivity(intent);
             }
         });
@@ -60,10 +63,9 @@ public class MontarInicio extends AppCompatActivity {
         AVA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MontarInicio.this, Avanzado.class);
+                Intent intent = new Intent(PintarInicio.this, PiAvanzado.class);
                 startActivity(intent);
             }
         });
     }
-
 }

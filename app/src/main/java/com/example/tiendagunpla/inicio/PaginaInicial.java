@@ -14,6 +14,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.tiendagunpla.Montar.MontarInicio;
+import com.example.tiendagunpla.Pintar.PintarInicio;
 import com.example.tiendagunpla.R;
 import com.example.tiendagunpla.buscador.buscador;
 
@@ -67,6 +68,16 @@ public class PaginaInicial extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(PaginaInicial.this, MontarInicio.class);
+                startActivity(intent);
+            }
+        });
+
+        FrameLayout pintar = findViewById(R.id.IMG_pintar);
+
+        pintar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PaginaInicial.this, PintarInicio.class);
                 startActivity(intent);
             }
         });

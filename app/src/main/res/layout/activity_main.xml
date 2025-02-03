@@ -101,37 +101,37 @@
 
             <ImageView
                 android:id="@+id/fgLogo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_width="190dp"
+                android:layout_height="170dp"
+                android:layout_marginTop="20dp"
                 app:srcCompat="@drawable/fglogo" />
 
             <ImageView
                 android:id="@+id/hgLogo"
                 android:layout_width="190dp"
                 android:layout_height="170dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 app:srcCompat="@drawable/hglogoo" />
 
             <ImageView
                 android:id="@+id/IMG_montar"
                 android:layout_width="195dp"
                 android:layout_height="140dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 app:srcCompat="@drawable/captura" />
 
             <ImageView
                 android:id="@+id/mgLogo"
                 android:layout_width="195dp"
                 android:layout_height="140dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 app:srcCompat="@drawable/mglogoo" />
 
             <ImageView
                 android:id="@+id/pgLogo"
                 android:layout_width="195dp"
                 android:layout_height="140dp"
-                android:layout_marginTop="40dp"
+                android:layout_margin="20dp"
                 app:srcCompat="@drawable/pglogo" />
 
         </LinearLayout>

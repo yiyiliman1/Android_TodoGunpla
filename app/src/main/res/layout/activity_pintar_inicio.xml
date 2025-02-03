@@ -5,14 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Montar.MontarInicio">
+    tools:context=".Pintar.PintarInicio">
 
     <ImageView
         android:id="@+id/imagefondo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/fondoapp"
+        app:srcCompat="@drawable/pinturas"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="32dp" />
 
@@ -201,7 +201,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.33" />
+        app:layout_constraintGuide_percent="0.32" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline6"
@@ -216,5 +216,4 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.87" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

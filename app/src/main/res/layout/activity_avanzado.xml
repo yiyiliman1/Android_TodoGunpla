@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Montar.MontarInicio">
+    tools:context=".Montar.Avanzado">
 
     <ImageView
         android:id="@+id/imagefondo"
@@ -83,54 +83,86 @@
         app:layout_constraintStart_toStartOf="@+id/cajaBuscador"
         app:layout_constraintTop_toTopOf="@+id/cajaBuscador"/>
 
-    <TextView
-        android:id="@+id/GoPrincipiante"
-        android:layout_width="245dp"
-        android:layout_height="72dp"
-        android:background="@drawable/header_style"
-        android:fontFamily="@font/dynapuff"
-        android:gravity="center"
-        android:text="Principiante"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/footer"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2">
 
-    </TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
 
-    <TextView
-        android:id="@+id/GoIntermedio"
-        android:layout_width="245dp"
-        android:layout_height="72dp"
-        android:background="@drawable/header_style"
-        android:fontFamily="@font/dynapuff"
-        android:gravity="center"
-        android:text="Intermedio"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline6"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="@+id/guideline5">
+            <TextView
+                android:layout_width="341dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/header_style"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="En este nivel, los modelistas aprenderán técnicas avanzadas de ensamblaje, personalización y pintura profesional para que sus maquetas tengan un acabado realista y de alta calidad.."
+                android:textColor="@color/black">
 
-    </TextView>
+            </TextView>
 
-    <TextView
-        android:id="@+id/GoAvanzado"
-        android:layout_width="245dp"
-        android:layout_height="72dp"
-        android:background="@drawable/header_style"
-        android:fontFamily="@font/dynapuff"
-        android:gravity="center"
-        android:text="Avanzado"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline7"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="@+id/guideline6">
+            <TextView
+                android:layout_width="341dp"
+                android:layout_height="320dp"
+                android:layout_marginTop="10dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/header_style"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="En este nivel, usaremos herramientas más especializadas:\n
+                \n✅ Aerógrafo y compresor (para pintar de manera uniforme y profesional).\n
+                \n✅ Masilla epoxi o putty (para modificaciones y arreglos de piezas).\n
+                \n✅ Láminas de plástico (PlaPlate) (para añadir detalles personalizados).\n
+                \n✅ Pigmentos y filtros de envejecimiento (para efectos realistas de desgaste).\n
+                \n✅ Barnices mate, satinado y brillante (para proteger la pintura y dar acabados diferentes).\n
+                \n✅ Pin vise (mini taladro manual) (para perforaciones y personalización)."
+                android:textColor="@color/black">
 
-    </TextView>
+            </TextView>
+
+            <TextView
+                android:layout_width="341dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/header_style"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="1️⃣ Corrección de imperfecciones: Usa masilla epoxi para rellenar huecos o modificar partes de la maqueta.\n
+                \n2️⃣ Modificación de piezas: Puedes recortar, lijar o agregar detalles con PlaPlate para mejorar el diseño.\n
+                \n3️⃣ Lavado y desengrase: Antes de pintar, lava las piezas con agua jabonosa y sécalas bien para eliminar grasa y residuos."
+                android:textColor="@color/black">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="341dp"
+                android:layout_height="120dp"
+                android:layout_margin="10dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/header_style"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="🔸 Agregando calcomanías y decals: Aplica decals al agua o en seco para personalizar la maqueta con emblemas y números.\n
+                \n🔸 Iluminación LED (opcional): Para un nivel extremo, puedes incorporar luces LED en los ojos o en partes estratégicas.
+                \n🔸 Efectos metálicos y de desgaste: Usa pintura metálica y esponjas para simular raspaduras en la armadura."
+                android:textColor="@color/black">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <LinearLayout
         android:id="@+id/footer"
@@ -201,7 +233,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.33" />
+        app:layout_constraintGuide_percent="0.37" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline6"

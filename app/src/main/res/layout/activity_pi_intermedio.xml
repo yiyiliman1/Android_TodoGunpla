@@ -5,14 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Montar.Intermedio">
+    tools:context=".Pintar.PiIntermedio">
 
     <ImageView
         android:id="@+id/imagefondo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/fondoapp"
+        app:srcCompat="@drawable/pinturas"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="32dp" />
 
@@ -100,60 +100,131 @@
 
             <TextView
                 android:layout_width="341dp"
-                android:layout_height="70dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:autoSizeTextType="uniform"
                 android:background="@drawable/header_style"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="En este nivel, los usuarios aprenderán técnicas más avanzadas para mejorar la estabilidad, la movilidad y los detalles estéticos de sus maquetas."
+                android:text="En este nivel, aprenderás técnicas más avanzadas para mejorar la apariencia de tus maquetas. Trabajaremos con efectos de sombreado, panelado y degradados para darles un aspecto más realista."
                 android:textColor="@color/black">
 
             </TextView>
 
             <TextView
+                android:layout_width="341dp"
+                android:layout_height="370dp"
+                android:layout_marginTop="10dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/header_style"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Además de los materiales usados en el nivel principiante, necesitarás:\n
+
+                \n✅ Aerógrafo (Opcional) – Facilita la aplicación de capas finas y uniformes.\n
+                \n✅ Compresor de Aire (si usas aerógrafo) – Para controlar la presión del aire.\n
+                \n✅ Pinturas Específicas para Aerógrafo – Son más fluidas y se adhieren mejor.\n
+                \n✅ Panel Liner o Lavado Acrílico – Para resaltar los detalles de la maqueta.\n
+                \n✅ Esponjas o Algodón – Para efectos de desgaste y degradado.\n
+                \n✅ Lápices de Color o Pasteles Secos – Para efectos de envejecimiento.\n
+                \n✅ Cinta de Enmascarar de Precisión – Para crear patrones y efectos más complejos."
+                android:textColor="@color/black">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="341dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="10dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/header_style"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text=" Aplicación de la Base:\n
+
+                \nUsa el mismo proceso del nivel principiante: limpiado, lijado e imprimación.\n
+                \nAplica una capa base con pincel o aerógrafo.\n
+                \nSi usas aerógrafo, trabaja con presión entre 10-15 PSI para evitar acumulaciones.\n
+                \n🔸 Degradados y Sombras con Aerógrafo:\n
+
+                \nUsa un tono ligeramente más oscuro en los bordes y un tono más claro en el centro de las piezas.\n
+                \nAplica capas muy finas y con poca pintura.\n
+                \n💡 Consejo: Si no tienes aerógrafo, puedes simular degradados usando pinceles de esponja o técnicas de pincel seco."
+                android:textColor="@color/black">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="341dp"
+                android:layout_height="350dp"
+                android:layout_marginTop="10dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/header_style"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="🔸 Técnica de Panel Liner:\n
+                \n✔ Usa un Panel Liner negro o gris para marcar las líneas de los paneles de la maqueta.\n
+                \n✔ Aplica el líquido con un pincel fino y deja que se meta en las ranuras.\n
+                \n✔ Espera unos minutos y retira el exceso con un hisopo levemente humedecido con diluyente.\n
+
+                \n🔸 Lavado Acrílico para Sombras:\n
+
+                \nMezcla pintura negra o marrón con agua hasta que quede muy diluida.\n
+                \nAplícala con un pincel sobre las líneas y hendiduras para resaltar los detalles.\n
+                \n💡 Consejo: Si usas esmalte en lugar de acrílico, puedes borrar errores con un poco de disolvente sin dañar la pintura base."
+                android:textColor="@color/black">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="341dp"
+                android:layout_height="500dp"
+                android:layout_marginTop="10dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/header_style"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="🔸 Pincel Seco para Resaltar Bordes:\n
+                \n✔ Usa pintura plateada o gris claro en un pincel seco.\n
+                \n✔ Retira el exceso de pintura en un papel hasta que casi no pinte.\n
+                \n✔ Pasa suavemente el pincel por los bordes para simular desgaste por roce.\n
+
+                \n🔸 Efecto de Óxido o Suciedad:\n
+
+                \nMezcla tonos marrón y naranja y aplícalos con una esponja.\n
+                \nUsa pinceles de cerdas duras para dar una textura más realista.\n
+                \nAplica pasteles secos para simular polvo o suciedad en zonas estratégicas.\n
+                \n🔸 Efecto de Pintura Desgastada:\n
+
+                \nUsa cinta de enmascarar para cubrir partes específicas y luego retira para dar un efecto de pintura descascarada.\n
+                \nAplica laca para el pelo antes de la capa de pintura y luego raspa con un pincel húmedo para simular desgaste.\n
+                \n💡 Consejo: Menos es más. Aplica estos efectos con moderación para evitar que la maqueta se vea sobrecargada."
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="341dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="10dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/header_style"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="🔸 Barniz en Spray o Aerógrafo:\n
+                \n✔ Usa barniz mate para un acabado realista, brillante para metalizados o satinado para equilibrar los efectos.\n
+                \n✔ Aplica capas finas y deja secar completamente entre cada una.\n
+
+                \n🔸 Secado y Montaje Final:\n
+
+                \nDeja secar la maqueta 24 horas antes de manipularla demasiado.\n
+                \nMonta las piezas finales y revisa si hay algún detalle que corregir.\n
+                \n💡 Consejo: Si usaste lavados o panelado con esmalte, aplica primero una capa de barniz antes de manipular la maqueta."
+                android:textColor="@color/black"/>
+
+            <WebView
+                android:id="@+id/webView"
                 android:layout_width="341dp"
                 android:layout_height="200dp"
-                android:layout_marginTop="10dp"
-                android:autoSizeTextType="uniform"
-                android:background="@drawable/header_style"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="1️⃣ Lijado y eliminación de rebabas: Usa una lima fina o lija de 800-1000 para eliminar las imperfecciones de corte.\n
-                \n2️⃣ Panelado con marcador: Resalta los detalles de la maqueta aplicando un 'panel lining' en las líneas estructurales.\n
-                \n3️⃣ Lavado de piezas (opcional): Para eliminar residuos de fabricación, puedes limpiar las piezas con agua y jabón suave antes de ensamblarlas."
-                android:textColor="@color/black">
-
-            </TextView>
-
-            <TextView
-                android:layout_width="341dp"
-                android:layout_height="200dp"
-                android:layout_marginTop="10dp"
-                android:autoSizeTextType="uniform"
-                android:background="@drawable/header_style"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="🔸 Pruebas en seco (Dry Fit) → Antes de unir las piezas con pegamento, ensambla sin presión para verificar el ajuste.\n
-                \n🔸 Pegamento en piezas opcionales → Algunas partes pueden fijarse con pegamento para evitar que se separen con el tiempo.\n
-                \n🔸 Refuerzo de articulaciones → Si algunas partes son muy flojas, usa cinta adhesiva delgada o barniz mate para darles más estabilidad.\n"
-                android:textColor="@color/black">
-
-            </TextView>
-
-            <TextView
-                android:layout_width="341dp"
-                android:layout_height="120dp"
-                android:layout_margin="10dp"
-                android:autoSizeTextType="uniform"
-                android:background="@drawable/header_style"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="🎨 Mejorando el color: Se pueden usar marcadores Gundam o pintura acrílica para pequeños retoques.\n
-                \n✏️ Sombras y desgastes: Se puede aplicar un poco de tiza pastel o pincel seco para crear efectos de desgaste en la maqueta."
-                android:textColor="@color/black">
-
-            </TextView>
+                android:layout_margin="10dp"/>
 
         </LinearLayout>
 
@@ -243,5 +314,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.87" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

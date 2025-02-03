@@ -157,11 +157,12 @@
             </FrameLayout>
 
             <FrameLayout
+                android:id="@+id/IMG_pintar"
                 android:layout_width="match_parent"
                 android:layout_height="160dp">
 
                 <ImageView
-                    android:id="@+id/IMG_pintar"
+
                     android:layout_width="match_parent"
                     android:layout_height="160dp"
                     android:scaleType="centerCrop"

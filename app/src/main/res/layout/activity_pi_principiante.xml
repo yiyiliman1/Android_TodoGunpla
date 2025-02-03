@@ -5,14 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Montar.MontarInicio">
+    tools:context=".Pintar.PiPrincipiante">
 
     <ImageView
         android:id="@+id/imagefondo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/fondoapp"
+        app:srcCompat="@drawable/pinturas"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="32dp" />
 
@@ -83,54 +83,129 @@
         app:layout_constraintStart_toStartOf="@+id/cajaBuscador"
         app:layout_constraintTop_toTopOf="@+id/cajaBuscador"/>
 
-    <TextView
-        android:id="@+id/GoPrincipiante"
-        android:layout_width="245dp"
-        android:layout_height="72dp"
-        android:background="@drawable/header_style"
-        android:fontFamily="@font/dynapuff"
-        android:gravity="center"
-        android:text="Principiante"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/footer"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2">
 
-    </TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
 
-    <TextView
-        android:id="@+id/GoIntermedio"
-        android:layout_width="245dp"
-        android:layout_height="72dp"
-        android:background="@drawable/header_style"
-        android:fontFamily="@font/dynapuff"
-        android:gravity="center"
-        android:text="Intermedio"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline6"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="@+id/guideline5">
+            <TextView
+                android:layout_width="341dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/header_style"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="En este nivel, aprenderás las bases de la pintura en maquetas: cómo preparar la superficie, elegir los colores y aplicar la pintura correctamente."
+                android:textColor="@color/black">
 
-    </TextView>
+            </TextView>
 
-    <TextView
-        android:id="@+id/GoAvanzado"
-        android:layout_width="245dp"
-        android:layout_height="72dp"
-        android:background="@drawable/header_style"
-        android:fontFamily="@font/dynapuff"
-        android:gravity="center"
-        android:text="Avanzado"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline7"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="@+id/guideline6">
+            <TextView
+                android:layout_width="341dp"
+                android:layout_height="500dp"
+                android:layout_marginTop="10dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/header_style"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Antes de comenzar, asegúrate de tener estos materiales:\n
 
-    </TextView>
+                \n✅ Pintura Acrílica o Esmalte – Se recomienda pintura acrílica para principiantes, ya que es fácil de limpiar y seca rápido.\n
+                \n✅ Pinceles de Diferentes Tamaños – Usa pinceles pequeños para detalles y medianos para superficies más grandes.\n
+                \n✅ Imprimación (Primer) – Ayuda a que la pintura se adhiera mejor a la maqueta.\n
+                \n✅ Paleta de Mezcla – Para combinar colores y lograr tonos específicos.\n
+                \n✅ Agua o Diluyente – Dependiendo del tipo de pintura que uses.\n
+                \n✅ Papel de Lija Fina (600-1000 grit) – Para suavizar imperfecciones.\n
+                \n✅ Cinta de Enmascarar – Para cubrir áreas que no deben ser pintadas.\n
+                \n✅ Barniz Transparente – Protege la pintura después de aplicarla."
+                android:textColor="@color/black">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="341dp"
+                android:layout_height="350dp"
+                android:layout_marginTop="10dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/header_style"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="🔸 Limpieza de las piezas: Antes de pintar, limpia la maqueta con un paño seco o un poco de alcohol isopropílico para eliminar el polvo o grasa.\n
+
+                \n🔸 Lijado: Si hay rebabas o imperfecciones en el plástico, usa una lija fina para suavizarlas.\n
+
+                \n🔸 Aplicación de imprimación:\n
+
+                \nAgita bien el bote de imprimación antes de usarlo.\n
+                \nRocía una capa fina y uniforme sobre la maqueta.\n
+                \nEspera al menos 30 minutos a que seque completamente.\n
+                \n💡 Consejo: Usa una imprimación de color gris o blanco según los tonos que vayas a aplicar después."
+                android:textColor="@color/black">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="341dp"
+                android:layout_height="400dp"
+                android:layout_marginTop="10dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/header_style"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="🔸 Cómo usar el pincel correctamente:\n
+                \n✔ Moja el pincel en pintura y retira el exceso en la paleta.\n
+                \n✔ Aplica la pintura con movimientos suaves y en capas delgadas.\n
+                \n✔ Espera a que cada capa seque antes de aplicar otra.\n
+
+                \n🔸 Evita las marcas del pincel:\n
+
+                \nNo uses demasiada pintura de golpe.\n
+                \nSi quedan marcas, diluye la pintura con un poco de agua o diluyente.\n
+                \n💡 Consejo: Usa un secador de aire frío para acelerar el proceso de secado."
+                android:textColor="@color/black">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="341dp"
+                android:layout_height="350dp"
+                android:layout_marginTop="10dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/header_style"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="🔸 Cómo pintar detalles pequeños:\n
+
+                \nUsa un pincel fino y un poco de pintura.\n
+                \nSi te equivocas, usa un hisopo con alcohol para corregirlo.\n
+                \nPuedes usar rotuladores de modelismo para líneas finas.\n
+                \n🔸 Sellado de la pintura:\n
+
+                \nCuando la pintura esté seca, aplica un barniz transparente en spray o con pincel.\n
+                \nPuedes elegir mate, satinado o brillante, dependiendo del acabado que prefieras.\n
+                \n💡 Consejo: Usa una mascarilla al aplicar barniz en spray para evitar inhalarlo."
+                android:textColor="@color/black"/>
+
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="341dp"
+                android:layout_height="200dp"
+                android:layout_margin="10dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <LinearLayout
         android:id="@+id/footer"
@@ -201,7 +276,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.33" />
+        app:layout_constraintGuide_percent="0.37" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline6"
