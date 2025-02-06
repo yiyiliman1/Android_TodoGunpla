@@ -14,10 +14,8 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.tiendagunpla.inicio.MainActivity;
 import com.example.tiendagunpla.R;
 import com.example.tiendagunpla.inicio.PaginaInicial;
-import com.example.tiendagunpla.modelos.fgVentana;
 
 import java.util.ArrayList;
 import java.util.List;

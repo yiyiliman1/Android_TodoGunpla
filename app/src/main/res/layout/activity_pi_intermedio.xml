@@ -100,7 +100,7 @@
 
             <TextView
                 android:layout_width="341dp"
-                android:layout_height="80dp"
+                android:layout_height="100dp"
                 android:layout_marginTop="10dp"
                 android:autoSizeTextType="uniform"
                 android:background="@drawable/header_style"
@@ -113,7 +113,7 @@
 
             <TextView
                 android:layout_width="341dp"
-                android:layout_height="370dp"
+                android:layout_height="390dp"
                 android:layout_marginTop="10dp"
                 android:autoSizeTextType="uniform"
                 android:background="@drawable/header_style"
@@ -134,7 +134,7 @@
 
             <TextView
                 android:layout_width="341dp"
-                android:layout_height="300dp"
+                android:layout_height="340dp"
                 android:layout_marginTop="10dp"
                 android:autoSizeTextType="uniform"
                 android:background="@drawable/header_style"
@@ -156,7 +156,7 @@
 
             <TextView
                 android:layout_width="341dp"
-                android:layout_height="350dp"
+                android:layout_height="370dp"
                 android:layout_marginTop="10dp"
                 android:autoSizeTextType="uniform"
                 android:background="@drawable/header_style"
@@ -203,7 +203,7 @@
 
             <TextView
                 android:layout_width="341dp"
-                android:layout_height="300dp"
+                android:layout_height="350dp"
                 android:layout_marginTop="10dp"
                 android:autoSizeTextType="uniform"
                 android:background="@drawable/header_style"
@@ -249,13 +249,15 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:id="@+id/Insta"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_margin="8dp"
-                android:contentDescription="Instagram"
+                android:contentDescription="Facebook"
                 android:src="@drawable/inst" />
 
             <ImageView
+                android:id="@+id/Tw"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_margin="8dp"
@@ -263,6 +265,7 @@
                 android:src="@drawable/twt" />
 
             <ImageView
+                android:id="@+id/YT"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_margin="8dp"
@@ -271,6 +274,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/Pri"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"

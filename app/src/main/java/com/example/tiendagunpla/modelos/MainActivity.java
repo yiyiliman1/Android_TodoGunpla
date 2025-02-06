@@ -1,6 +1,7 @@
-package com.example.tiendagunpla.inicio;
+package com.example.tiendagunpla.modelos;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -14,11 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.tiendagunpla.R;
 import com.example.tiendagunpla.buscador.buscador;
-import com.example.tiendagunpla.modelos.fgVentana;
-import com.example.tiendagunpla.modelos.hgVentana;
-import com.example.tiendagunpla.modelos.mgVentana;
-import com.example.tiendagunpla.modelos.pgVentana;
-import com.example.tiendagunpla.modelos.rgVentana;
+import com.example.tiendagunpla.inicio.PaginaInicial;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -109,6 +106,36 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        ImageView ToInst = findViewById(R.id.Insta);
+        ToInst.setOnClickListener(v -> {
+            String url = "https://www.instagram.com/gundamstagram/?hl=es";
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            startActivity(intent);
+        });
+
+        ImageView ToTw = findViewById(R.id.Tw);
+        ToTw.setOnClickListener(v -> {
+            String url = "https://x.com/GundamSpain";
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            startActivity(intent);
+        });
+
+        ImageView ToYT = findViewById(R.id.YT);
+        ToYT.setOnClickListener(v -> {
+            String url = "https://www.youtube.com/@MiniFLY/videos";
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            startActivity(intent);
+        });
+
+        TextView ToPri = findViewById(R.id.Pri);
+        ToPri.setOnClickListener(v -> {
+            String url = "https://policies.google.com/privacy?hl=es";
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            startActivity(intent);
+        });
+
     }
 
 }

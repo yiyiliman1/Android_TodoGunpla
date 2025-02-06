@@ -50,7 +50,6 @@
         android:layout_width="72dp"
         android:layout_height="46dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/titulo"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/icono_salir" />
@@ -99,12 +98,12 @@
             <FrameLayout
                 android:id="@+id/IMG_tienda"
                 android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
                 android:layout_height="160dp">
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="140dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_height="160dp"
                     android:scaleType="centerCrop"
                     app:srcCompat="@drawable/tienda" />
 
@@ -186,34 +185,7 @@
 
             </FrameLayout>
 
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="160dp">
 
-                <ImageView
-                    android:id="@+id/IMG_comun"
-                    android:layout_width="match_parent"
-                    android:layout_height="160dp"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/comunidad" />
-
-                <TextView
-                    android:id="@+id/textodenropintar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|end"
-                    android:layout_margin="8dp"
-                    android:background="@android:color/transparent"
-                    android:fontFamily="@font/dynapuff"
-                    android:shadowColor="@android:color/black"
-                    android:shadowDx="5"
-                    android:shadowDy="5"
-                    android:shadowRadius="5"
-                    android:text="Comunidad"
-                    android:textColor="@color/white"
-                    android:textSize="30sp" />
-
-            </FrameLayout>
         </LinearLayout>
 
     </ScrollView>

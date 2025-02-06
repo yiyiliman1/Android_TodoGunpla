@@ -13,7 +13,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.tiendagunpla.R;
-import com.example.tiendagunpla.inicio.MainActivity;
+import com.example.tiendagunpla.modelos.MainActivity;
 
 public class detalle_producto extends AppCompatActivity {
 

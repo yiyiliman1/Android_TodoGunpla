@@ -52,7 +52,7 @@
             android:name=".inicio.crearCuenta"
             android:exported="false" />
         <activity
-            android:name=".inicio.MainActivity"
+            android:name=".modelos.MainActivity"
             android:exported="false" />
         <activity
             android:name=".modelos.pgVentana"

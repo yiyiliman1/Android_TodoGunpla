@@ -18,6 +18,7 @@ import com.example.tiendagunpla.Montar.MontarInicio;
 import com.example.tiendagunpla.Pintar.PintarInicio;
 import com.example.tiendagunpla.R;
 import com.example.tiendagunpla.buscador.buscador;
+import com.example.tiendagunpla.modelos.MainActivity;
 
 public class PaginaInicial extends AppCompatActivity {
 

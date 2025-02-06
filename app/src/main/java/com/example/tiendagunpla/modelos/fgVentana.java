@@ -1,6 +1,7 @@
 package com.example.tiendagunpla.modelos;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -15,7 +16,6 @@ import androidx.core.view.WindowInsetsCompat;
 import com.example.tiendagunpla.R;
 import com.example.tiendagunpla.buscador.buscador;
 import com.example.tiendagunpla.buscador.detalle_producto;
-import com.example.tiendagunpla.inicio.MainActivity;
 
 public class fgVentana extends AppCompatActivity {
 
@@ -64,6 +64,34 @@ public class fgVentana extends AppCompatActivity {
         fgDynames.setOnClickListener(v -> abrirDetalles("fg_dynames"));
         fgKyrios.setOnClickListener(v -> abrirDetalles("fg_kyrios"));
         fgVirtue.setOnClickListener(v -> abrirDetalles("fg_virtue"));
+
+        ImageView ToInst = findViewById(R.id.Insta);
+        ToInst.setOnClickListener(v -> {
+            String url = "https://www.instagram.com/gundamstagram/?hl=es";
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            startActivity(intent);
+        });
+
+        ImageView ToTw = findViewById(R.id.Tw);
+        ToTw.setOnClickListener(v -> {
+            String url = "https://x.com/GundamSpain";
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            startActivity(intent);
+        });
+
+        ImageView ToYT = findViewById(R.id.YT);
+        ToYT.setOnClickListener(v -> {
+            String url = "https://www.youtube.com/@MiniFLY/videos";
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            startActivity(intent);
+        });
+
+        TextView ToPri = findViewById(R.id.Pri);
+        ToPri.setOnClickListener(v -> {
+            String url = "https://policies.google.com/privacy?hl=es";
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            startActivity(intent);
+        });
     }
 
     private void abrirDetalles(String productoId) {
@@ -71,6 +99,8 @@ public class fgVentana extends AppCompatActivity {
         intent.putExtra("producto_id", productoId);
         startActivity(intent);
     }
+
+
 }
 
 

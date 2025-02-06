@@ -1,12 +1,11 @@
 package com.example.tiendagunpla.Montar;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,7 +14,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.tiendagunpla.R;
-import com.example.tiendagunpla.inicio.MainActivity;
+import com.example.tiendagunpla.buscador.buscador;
 import com.example.tiendagunpla.inicio.PaginaInicial;
 
 public class Intermedio extends AppCompatActivity {
@@ -31,6 +30,16 @@ public class Intermedio extends AppCompatActivity {
             return insets;
         });
 
+        TextView bsc = findViewById(R.id.buscador);
+
+        bsc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intermedio.this, buscador.class);
+                startActivity(intent);
+            }
+        });
+
         ImageView Home = findViewById(R.id.paginaHome);
         Home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +47,34 @@ public class Intermedio extends AppCompatActivity {
                 Intent intent = new Intent(Intermedio.this, PaginaInicial.class);
                 startActivity(intent);
             }
+        });
+
+        ImageView ToInst = findViewById(R.id.Insta);
+        ToInst.setOnClickListener(v -> {
+            String url = "https://www.instagram.com/gundamstagram/?hl=es";
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            startActivity(intent);
+        });
+
+        ImageView ToTw = findViewById(R.id.Tw);
+        ToTw.setOnClickListener(v -> {
+            String url = "https://x.com/GundamSpain";
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            startActivity(intent);
+        });
+
+        ImageView ToYT = findViewById(R.id.YT);
+        ToYT.setOnClickListener(v -> {
+            String url = "https://www.youtube.com/@MiniFLY/videos";
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            startActivity(intent);
+        });
+
+        TextView ToPri = findViewById(R.id.Pri);
+        ToPri.setOnClickListener(v -> {
+            String url = "https://policies.google.com/privacy?hl=es";
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            startActivity(intent);
         });
     }
 

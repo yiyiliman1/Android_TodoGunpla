@@ -90,6 +90,7 @@
         android:background="@drawable/header_style"
         android:fontFamily="@font/dynapuff"
         android:gravity="center"
+        android:textColor="@color/black"
         android:text="Principiante"
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
@@ -107,6 +108,7 @@
         android:background="@drawable/header_style"
         android:fontFamily="@font/dynapuff"
         android:gravity="center"
+        android:textColor="@color/black"
         android:text="Intermedio"
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
@@ -123,6 +125,7 @@
         android:background="@drawable/header_style"
         android:fontFamily="@font/dynapuff"
         android:gravity="center"
+        android:textColor="@color/black"
         android:text="Avanzado"
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
@@ -151,13 +154,15 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:id="@+id/Insta"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_margin="8dp"
-                android:contentDescription="Instagram"
+                android:contentDescription="Facebook"
                 android:src="@drawable/inst" />
 
             <ImageView
+                android:id="@+id/Tw"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_margin="8dp"
@@ -165,6 +170,7 @@
                 android:src="@drawable/twt" />
 
             <ImageView
+                android:id="@+id/YT"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_margin="8dp"
@@ -173,6 +179,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/Pri"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
